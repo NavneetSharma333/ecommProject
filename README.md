@@ -1,3 +1,3 @@
-# This repor is for ecommerce automation flow
+# This repo is for ecommerce automation flow
 <br>
-Author = Navneet
+# Author = Navneet
