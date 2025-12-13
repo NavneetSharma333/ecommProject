@@ -41,5 +41,5 @@ if driver.current_url == "https://automationexercise.com/signup":
 else:
     print("still on Login page")
 
-# # Printing the current url address
-# print("Current web URL is " + driver.current_url)
+# Printing the current url address
+print("Current web URL is " + driver.current_url)
