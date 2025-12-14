@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 import time
 
 # Start chrome
@@ -30,10 +31,16 @@ signupEmail.send_keys("ecomm@yopmail.com")
 driver.execute_script("window.scrollBy(0, 100);")
 
 # Clicking on the signup BUTTON
-signupButton = driver.find_element(By.XPATH, "//button[normalize-space()='Signup']")
+signupButton = driver.find_elements(By.CSS_SELECTOR, "button[data-qa='signup-button']")[0]
+
+act = ActionChains(driver)
+act.move_to_element(signupButton).perform()
+
+time.sleep(3)
+
 signupButton.click
 
-time.sleep(5)
+# driver.get_screenshot_as_file("beforeClickingSignup.png")
 
 # Checking if landed on correct page or not, after click on signup button
 if driver.current_url == "https://automationexercise.com/signup":
@@ -42,4 +49,4 @@ else:
     print("still on Login page")
 
 # Printing the current url address
-print("Current web URL is " + driver.current_url)
+print("Current web URL is ------> " + driver.current_url)
