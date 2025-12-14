@@ -50,3 +50,5 @@ else:
 
 # Printing the current url address
 print("Current web URL is ------> " + driver.current_url)
+
+print("currnetl not clciking on the signup button")
