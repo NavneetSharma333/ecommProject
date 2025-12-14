@@ -36,7 +36,7 @@ signupButton = driver.find_elements(By.CSS_SELECTOR, "button[data-qa='signup-but
 act = ActionChains(driver)
 act.move_to_element(signupButton).perform()
 
-time.sleep(3)
+time.sleep(5)
 
 signupButton.click
 
