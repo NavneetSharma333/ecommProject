@@ -24,21 +24,17 @@ signupName.send_keys("testecomm")
 
 # Adding the email
 signupEmail = driver.find_element(By.CSS_SELECTOR, "input[data-qa='signup-email']")
-signupEmail.click
+signupEmail.click()
 signupEmail.send_keys("ecomm@yopmail.com")
 
 # Scrolling the page if element is not visible in the current viewport
 driver.execute_script("window.scrollBy(0, 100);")
 
 # Clicking on the signup BUTTON
-signupButton = driver.find_elements(By.CSS_SELECTOR, "button[data-qa='signup-button']")[0]
+signupButton = driver.find_elements(By.XPATH, "//button[@data-qa='signup-button']")[0]
+signupButton.click()
 
-act = ActionChains(driver)
-act.move_to_element(signupButton).perform()
-
-time.sleep(5)
-
-signupButton.click
+time.sleep(3)
 
 # driver.get_screenshot_as_file("beforeClickingSignup.png")
 
@@ -51,4 +47,3 @@ else:
 # Printing the current url address
 print("Current web URL is ------> " + driver.current_url)
 
-print("currnetl not clciking on the signup button")
