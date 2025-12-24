@@ -1,6 +1,6 @@
-from driver_setup import get_driver
-from pages.home_page import HomePage
-from pages.login_page import LoginPage
+from ecommerceSeleniumPython.driver_setup import get_driver
+from ecommerceSeleniumPython.pages.home_page import HomePage
+from ecommerceSeleniumPython.pages.login_page import LoginPage
 
 def test_signup():
     driver = get_driver()

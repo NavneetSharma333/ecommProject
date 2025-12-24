@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from utils.base_page import BasePage
+from ecommerceSeleniumPython.utils.base_page import BasePage
 
 class HomePage(BasePage):
 
